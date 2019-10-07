@@ -19,7 +19,7 @@ namespace Interfaces.Models
 
 
 
-    public Fries(string name, int calories, int fat, int protien, int carbohydrates, string cut, double price,) : base(name, calories, fat, protien, carbohydrates)
+    public Fries(string name, int calories, int fat, int protien, int carbohydrates, string cut, double price) : base(name, calories, fat, protien, carbohydrates)
     {
       FryCut = cut;
       BasePrice = price;
