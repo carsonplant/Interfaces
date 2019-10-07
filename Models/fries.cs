@@ -7,15 +7,25 @@ namespace Interfaces.Models
   public class Fries : FoodItem, IConsumable, ISize
   {
     public string FryCut { get; set; }
+    public double BasePrice { get; set; }
     public double SizeMultiplier { get; set; }
-    public Fries(string name, int calories, int fat, int protien, int carbohydrates) : base(name, calories, fat, protien, carbohydrates)
+
+
+
+    public double GetPrice(Size size)
     {
+      return BasePrice + (SizeMultiplier * (int)size);
     }
 
 
-    public double GetPrice(Size s)
+
+    public Fries(string name, int calories, int fat, int protien, int carbohydrates, string cut, double price,) : base(name, calories, fat, protien, carbohydrates)
     {
-      throw new System.NotImplementedException();
+      FryCut = cut;
+      BasePrice = price;
+
     }
+
+
   }
 }
