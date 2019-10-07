@@ -4,6 +4,7 @@ namespace burgershack.Models
 {
   public class drink : IConsumable, ISize
   {
+
     public int Calories { get; set; }
     public int Fat { get; set; }
     public int Protien { get; set; }
