@@ -4,8 +4,9 @@ using burgershack.Models;
 
 namespace Interfaces.Models
 {
-  public class Fries : FoodItem, IConsumable, ISize
+  public class Fries : FoodItem, IPurchasable, ISize
   {
+
     public string FryCut { get; set; }
     public double BasePrice { get; set; }
     public double SizeMultiplier { get; set; }
